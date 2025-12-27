@@ -99,5 +99,53 @@
     </div>
   </div>
 </footer>
+
+<!-- ===== NBA LIVE SCOREBOARD (START) ===== -->
+<section id="nbaScoreboard" style="margin:40px 20px;">
+  <h2>NBA Scores (Today)</h2>
+  <div id="nbaScores">Loading NBA games…</div>
+</section>
+
+<script>
+async function loadNbaScores() {
+  const box = document.getElementById("nbaScores");
+  try {
+    const res = await fetch("/.netlify/functions/nba-scoreboard");
+    if (!res.ok) throw new Error("Function error: " + res.status);
+    const json = await res.json();
+
+    const games = json.data || [];
+    if (!games.length) {
+      box.textContent = "No NBA games found for today.";
+      return;
+    }
+
+    box.innerHTML = games.map(g => {
+      const away = g.visitor_team?.full_name || "Away";
+      const home = g.home_team?.full_name || "Home";
+      const awayScore = g.visitor_team_score ?? "";
+      const homeScore = g.home_team_score ?? "";
+      const status = g.status || "";
+
+      return `
+        <div style="padding:10px;border:1px solid #ddd;border-radius:8px;margin:10px 0;">
+          <strong>${away}</strong> ${awayScore}
+          @
+          <strong>${home}</strong> ${homeScore}
+          <div style="font-size:0.9em;opacity:0.8;">${status}</div>
+        </div>
+      `;
+    }).join("");
+  } catch (err) {
+    box.textContent = "NBA scores not available yet.";
+    console.error(err);
+  }
+}
+loadNbaScores();
+</script>
+<!-- ===== NBA LIVE SCOREBOARD (END) ===== -->
+
 </body>
 </html>
+ 
+
