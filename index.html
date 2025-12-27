@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8127325405743781"
+          crossorigin="anonymous"></script>
+
+  <meta charset="utf-8">
+  <title>Hardwood Highlights – Overview</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="brand-lockup">
+      <div class="brand-mark">HH</div>
+      <div>
+        <div class="brand-title">Hardwood Highlights</div>
+        <div class="brand-subtitle">Pro & College · Men & Women</div>
+      </div>
+    </div>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li><li><a class="" href="nba.html">NBA</a></li><li><a class="" href="wnba.html">WNBA</a></li><li><a class="" href="ncaa.html">NCAA M</a></li><li><a class="" href="ncaaw.html">NCAA W</a></li><li><a class="" href="mm.html">March</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="page-shell">
+
+  <section class="hero">
+    <h1>Today on the Hardwood</h1>
+    <p class="hero-subtitle">Standings snapshots, recent results, featured matchups, and player spotlights — across pro & college basketball (men and women).</p>
+  </section>
+<section class="sections-grid" id="standings">
+    <article class="card">
+      <h2><span class="section-icon">📊</span>Standings (Snapshot)</h2>
+      <p class="muted">Static snapshot (stable). You can update records anytime. Live standings can be added later, one league at a time.</p>
+
+      <div class="two-col">
+        <div class="mini-table">
+          <h3>NBA Standings (Auto)</h3>
+          <table>
+            <thead><tr><th>Team</th><th>W</th><th>L</th></tr></thead>
+            <tbody id="nba-standings-body">
+          <tr><td colspan="3" class="muted">Loading standings…</td></tr>
+        </tbody>
+          </table>
+        </div>
+
+        <div class="mini-table">
+          <h3>WNBA Standings (Auto)</h3>
+          <table>
+            <thead><tr><th>Team</th><th>W</th><th>L</th></tr></thead>
+            <tbody id="wnba-standings-body">
+          <tr><td colspan="3" class="muted">Loading standings…</td></tr>
+        </tbody>
+          </table>
+        </div>
+      </div>
+    </article>
+
+    <aside class="card" id="results">
+      <h2><span class="section-icon">🧾</span>Recent Results</h2>
+      <p class="muted">Quick scoreboard-style recap lines. Replace dashes with scores as needed.</p>
+      <div class="list-compact">
+        <div class="row"><div class="row-title">NBA</div><div class="row-sub">Team A — · Team B —</div></div>
+        <div class="row"><div class="row-title">WNBA</div><div class="row-sub">Team A — · Team B —</div></div>
+        <div class="row"><div class="row-title">NCAA Men</div><div class="row-sub">Team A — · Team B —</div></div>
+        <div class="row"><div class="row-title">NCAA Women</div><div class="row-sub">Team A — · Team B —</div></div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="sections-grid" id="live">
+    <article class="card">
+      <h2><span class="section-icon">📡</span>Live Women&apos;s Scoreboards</h2>
+      <p class="muted">These two boards pull live data using the existing lightweight script in this site. If data is down, the page stays stable.</p>
+
+      
+      <div class="scoreboard-block">
+        <div class="scoreboard-head">
+          <div>
+            <strong>NBA Live</strong>
+            <div class="muted" id="nba-status">—</div>
+          </div>
+          <button class="btn" id="nba-refresh" type="button">Refresh</button>
+        </div>
+        <div id="nba-scoreboard" class="scoreboard-body"></div>
+      </div>
+
+      <div class="scoreboard-block" style="margin-top:14px;">
+        <div class="scoreboard-head">
+          <div>
+            <strong>NCAA Men Live</strong>
+            <div class="muted" id="ncaa-status">—</div>
+          </div>
+          <button class="btn" id="ncaa-refresh" type="button">Refresh</button>
+        </div>
+        <div id="ncaa-scoreboard" class="scoreboard-body"></div>
+      </div>
+
+<div class="scoreboard-block">
+        <div class="scoreboard-head">
+          <div>
+            <strong>WNBA Live</strong>
+            <div class="muted" id="wnba-status">—</div>
+          </div>
+          <button class="btn" id="wnba-refresh" type="button">Refresh</button>
+        </div>
+        <div id="wnba-scoreboard" class="scoreboard-body"></div>
+      </div>
+
+      <div class="scoreboard-block" style="margin-top:14px;">
+        <div class="scoreboard-head">
+          <div>
+            <strong>NCAA Women Live</strong>
+            <div class="muted" id="ncaaw-status">—</div>
+          </div>
+          <button class="btn" id="ncaaw-refresh" type="button">Refresh</button>
+        </div>
+        <div id="ncaaw-scoreboard" class="scoreboard-body"></div>
+      </div>
+
+      <p class="muted" style="margin-top:12px;">Note: NBA + NCAA Men live boards can be added later (carefully) to avoid breaking anything.</p>
+    </article>
+
+    <aside class="card">
+      <h2><span class="section-icon">🧭</span>Quick Links</h2>
+      <p>Jump straight to:</p>
+      <div class="pill-row"><a class="pill" href="#featured">Featured</a>
+        <a class="pill" href="#standings">Standings</a>
+        <a class="pill" href="#results">Results</a>
+        <a class="pill" href="#live">Live</a>
+      </div>
+      <p class="muted" style="margin-top:10px;">This keeps the homepage snappy and easy to scan.</p>
+    </aside>
+  </section>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 Hardwood Highlights.</div>
+    <div class="footer-links">
+      <a href="legal/disclaimer.html">Disclaimer</a>
+      <a href="legal/privacy.html">Privacy</a>
+      <a href="legal/terms.html">Terms</a>
+      <a href="legal/contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/live-scoreboards.js" defer></script>
+</body>
+</html>
