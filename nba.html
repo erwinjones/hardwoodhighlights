@@ -3,47 +3,66 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NBA | Hardwood Highlights</title>
+  <title>WNBA | Hardwood Highlights</title>
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f3f3f3; }
     header { padding: 16px; background: #111; color: #fff; }
     header h1 { margin: 0; font-size: 20px; }
     nav { margin-top: 8px; }
     nav a { color: #fff; text-decoration: none; margin-right: 12px; }
     main { padding: 16px; }
-    .card { max-width: 980px; margin: 0 auto; background: #fff; border-radius: 10px; padding: 14px; }
+    .card { max-width: 980px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 14px; }
     .muted { color: #666; font-size: 14px; }
     .frameWrap { width: 100%; max-width: 980px; margin: 12px auto 0; }
-    iframe { width: 100%; height: 900px; border: 0; }
+    iframe { width: 100%; height: 900px; border: 0; border-radius: 10px; background:#fff; }
+    .btnrow { text-align:center; margin-top: 10px; }
+    .btn {
+      display:inline-block; padding:10px 12px; border-radius:10px;
+      border:1px solid #ddd; text-decoration:none; color:#111; margin: 6px;
+      background:#fafafa;
+    }
+    .btn:hover { background:#f0f0f0; }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Hardwood Highlights — NBA</h1>
+    <h1>Hardwood Highlights — WNBA</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="wnba.html">WNBA</a>
-      <a href="ncaa.html">NCAA</a>
+      <a href="nba.html">NBA</a>
+      <a href="ncaa.html">NCAA Men</a>
+      <a href="ncaaw.html">NCAA Women</a>
     </nav>
   </header>
 
   <main>
     <div class="card">
-      <h2 style="margin-top:0;text-align:center;">Live NBA Scoreboard</h2>
-    <p class="muted" style="text-align:center;margin-top:0;">
-  Live NBA scores — updated in real time.
-</p>
- 
+      <h2 style="margin-top:0;text-align:center;">WNBA Scores, Results & Standings</h2>
+      <p class="muted" style="text-align:center;margin-top:0;">
+        WNBA status at a glance — scores, results, fixtures, and standings (works in-season and offseason).
+      </p>
 
       <div class="frameWrap">
+        <!-- Direct-to-WNBA page (no soccer-first browsing) -->
         <iframe
-          src="https://www.scoreboard.com/us/basketball/usa/nba/"
+          src="https://www.flashscoreusa.com/basketball/usa/wnba/"
           loading="lazy"
           referrerpolicy="no-referrer"
-          title="NBA Live Scoreboard"></iframe>
+          title="WNBA Scores, Results, Fixtures, Standings">
+        </iframe>
       </div>
+
+      <div class="btnrow">
+        <!-- Optional: official references open in a new tab -->
+        <a class="btn" href="https://www.wnba.com/standings" target="_blank" rel="noopener noreferrer">Official WNBA Standings</a>
+        <a class="btn" href="https://www.wnba.com/schedule" target="_blank" rel="noopener noreferrer">Official WNBA Schedule</a>
+      </div>
+
+      <p class="muted" style="text-align:center;margin:12px 0 0;">
+        Tip: Inside the board, use “Results / Fixtures / Standings” to jump exactly where you want.
+      </p>
     </div>
   </main>
 </body>
