@@ -1,103 +1,198 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8127325405743781"
-          crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hardwood Highlights | Pro & College • Men & Women</title>
 
-  <meta charset="utf-8">
-  <title>March Madness Hub – Hardwood Highlights</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/favicon.ico">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background:#f4f4f4;
+    }
+
+    /* ===== HEADER / BANNER ===== */
+    .site-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 18px;
+      background:#fff;
+      border-bottom:1px solid rgba(0,0,0,.1);
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand-badge{
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      background:#f5a14a;
+      color:#111;
+      border:2px solid rgba(0,0,0,.15);
+    }
+    .brand-title{
+      font-weight:800;
+      letter-spacing:.12em;
+      font-size:14px;
+    }
+    .brand-sub{
+      font-size:12px;
+      color:#666;
+      margin-top:2px;
+    }
+    .site-nav{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .nav-link{
+      color:#111;
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      letter-spacing:.08em;
+    }
+    .nav-link:hover{opacity:.7;}
+
+    /* ===== MAIN CONTENT ===== */
+    main{padding:20px;}
+    .wrap{max-width:1100px;margin:0 auto;}
+
+    .hero{
+      background:#fff;
+      border-radius:16px;
+      padding:22px;
+      margin-bottom:18px;
+      border:3px solid rgba(245,161,74,.8);
+    }
+    .hero h2{margin:0 0 8px 0;font-size:28px;}
+    .hero p{margin:0;color:#555;font-size:16px;}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:16px;
+      padding:18px;
+      border:3px solid rgba(245,161,74,.8);
+    }
+    .card h3{margin:0 0 8px 0;font-size:20px;}
+    .card p{margin:0 0 14px 0;color:#555;font-size:14px;line-height:1.4;}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      background:#fafafa;
+      border:1px solid #ddd;
+      color:#111;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn:hover{background:#f0f0f0;}
+
+    footer{
+      text-align:center;
+      font-size:12px;
+      color:#777;
+      padding:18px;
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-  <div class="nav-container">
-    <div class="brand-lockup">
-      <div class="brand-mark">HH</div>
+  <!-- ===== BANNER ===== -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-badge">HH</div>
       <div>
-        <div class="brand-title">Hardwood Highlights</div>
-        <div class="brand-subtitle">Pro & College · Men & Women</div>
+        <div class="brand-title">HARDWOOD HIGHLIGHTS</div>
+        <div class="brand-sub">Pro &amp; College • Men &amp; Women</div>
       </div>
     </div>
-    <nav aria-label="Primary">
-      <ul>
-        <li><a class="" href="index.html">Home</a></li><li><a class="" href="nba.html">NBA</a></li><li><a class="" href="wnba.html">WNBA</a></li><li><a class="" href="ncaa.html">NCAA M</a></li><li><a class="" href="ncaaw.html">NCAA W</a></li><li><a class="active" href="mm.html">March</a></li>
-      </ul>
+
+    <nav class="site-nav">
+      <a class="nav-link" href="index.html">HOME</a>
+      <a class="nav-link" href="nba.html">NBA</a>
+      <a class="nav-link" href="wnba.html">WNBA</a>
+      <a class="nav-link" href="ncaa.html">NCAA M</a>
+      <a class="nav-link" href="ncaaw.html">NCAA W</a>
+      <a class="nav-link" href="mm.html">MARCH</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<div class="page-shell">
+  <!-- ===== BODY ===== -->
+  <main>
+    <div class="wrap">
 
-  <section class="hero">
-    <h1>March Madness Hub</h1>
-    <p class="hero-subtitle">Standings snapshots, recent results, featured matchups, and player spotlights.</p>
-  </section>
+      <section class="hero">
+        <h2>Today on the Hardwood</h2>
+        <p>
+          Jump straight to scores, results, fixtures, standings, and tournament coverage
+          across pro &amp; college basketball.
+        </p>
+      </section>
 
-  <section class="sections-grid">
-    <article class="card">
-      <h2><span class="section-icon">🎯</span>Featured Matchup</h2>
-      <div id="mm-featured" class="list-compact"></div>
-    </article>
+      <section class="grid">
+        <article class="card">
+          <h3>NBA</h3>
+          <p>Professional basketball hub — scores, results, fixtures, and standings.</p>
+          <a class="btn" href="nba.html">Open NBA</a>
+        </article>
 
-    <aside class="card">
-      <div class="card-header-row">
-        <h2><span class="section-icon">📅</span>Upcoming Games</h2>
-        <button class="btn" id="mm-refresh" type="button">Refresh</button>
-      </div>
-      <div id="mm-status" class="muted" style="margin-top:6px"></div>
-      <div id="mm-upcoming" class="schedule"></div>
-      <div class="card" style="margin-top:14px;">
-        <div class="card-header">
-          <div>
-            <strong>March Leaders</strong>
-            <div class="muted">Top performers (last 3 days)</div>
-          </div>
-        </div>
-        <div id="mm-leaders" class="leaders-body">
-          <div class="muted">Loading…</div>
-        </div>
-      </div>
+        <article class="card">
+          <h3>WNBA</h3>
+          <p>Season-aware WNBA page with results and standings year-round.</p>
+          <a class="btn" href="wnba.html">Open WNBA</a>
+        </article>
 
-    </aside>
-  </section>
+        <article class="card">
+          <h3>NCAA Men</h3>
+          <p>Men’s college basketball — matchups, results, and standings.</p>
+          <a class="btn" href="ncaa.html">Open NCAA Men</a>
+        </article>
 
-  <section class="sections-grid">
-    <article class="card">
-      <h2><span class="section-icon">📊</span>Standings Snapshot</h2>
-      <p class="muted">Stable snapshot — update anytime.</p>
-      <table>
-        <thead><tr><th>Team</th><th>W</th><th>L</th></tr></thead>
-        <tbody id="mm-standings-body">
-          <tr><td colspan="3" class="muted">Loading standings…</td></tr>
-        </tbody>
-      </table>
-    </article>
+        <article class="card">
+          <h3>NCAA Women</h3>
+          <p>Women’s college basketball — matchups, results, and standings.</p>
+          <a class="btn" href="ncaaw.html">Open NCAA Women</a>
+        </article>
 
-    <aside class="card">
-      <h2><span class="section-icon">🧾</span>Recent Results</h2>
-      <div id="mm-recent" class="schedule"></div><div class="row-sub">Team A — · Team B —</div></div>
-        <div class="row"><div class="row-title">Game 2</div><div class="row-sub">Team A — · Team B —</div></div>
-        <div class="row"><div class="row-title">Game 3</div><div class="row-sub">Team A — · Team B —</div></div>
-      </div>
-    </aside>
-  </section>
+        <article class="card">
+          <h3>March</h3>
+          <p>March Madness hub — brackets, tournament tracking, and championship coverage.</p>
+          <a class="btn" href="mm.html">Open March</a>
+        </article>
+      </section>
 
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div>© 2025 Hardwood Highlights.</div>
-    <div class="footer-links">
-      <a href="legal/disclaimer.html">Disclaimer</a>
-      <a href="legal/privacy.html">Privacy</a>
-      <a href="legal/terms.html">Terms</a>
-      <a href="legal/contact.html">Contact</a>
     </div>
-  </div>
-</footer>
+  </main>
+
+  <footer>
+    © Hardwood Highlights
+  </footer>
+
 </body>
 </html>
