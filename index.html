@@ -3,100 +3,196 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hardwood Highlights | Pro & College — Men & Women</title>
+  <title>Hardwood Highlights | Pro & College • Men & Women</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f3f3f3; }
-    header { padding: 16px; background: #111; color: #fff; }
-    header h1 { margin: 0; font-size: 22px; letter-spacing: 0.5px; }
-    header .tag { margin-top: 4px; color:#cfcfcf; font-size: 13px; }
-    nav { margin-top: 10px; }
-    nav a { color: #fff; text-decoration: none; margin-right: 12px; font-size: 14px; }
-    nav a:hover { text-decoration: underline; }
-
-    main { padding: 18px; }
-    .wrap { max-width: 1080px; margin: 0 auto; }
-
-    .hero {
-      background:#fff; border-radius: 14px; padding: 18px; margin-bottom: 14px;
-      box-shadow: 0 1px 10px rgba(0,0,0,.05);
-    }
-    .hero h2 { margin: 0 0 6px 0; font-size: 26px; }
-    .hero p { margin: 0; color:#555; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 14px;
-      margin-top: 14px;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background:#f4f4f4;
     }
 
-    .card {
-      background:#fff; border-radius: 14px; padding: 16px;
-      box-shadow: 0 1px 10px rgba(0,0,0,.05);
-      border: 2px solid rgba(255,140,0,.45);
+    /* ===== HEADER / BANNER ===== */
+    .site-header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 18px;
+      background:#fff;
+      border-bottom:1px solid rgba(0,0,0,.1);
+      position:sticky;
+      top:0;
+      z-index:10;
     }
-    .card h3 { margin: 0 0 6px 0; font-size: 18px; }
-    .card p { margin: 0 0 12px 0; color:#666; font-size: 14px; line-height: 1.35; }
-
-    .btn {
-      display:inline-block; padding:10px 12px; border-radius: 10px;
-      border: 1px solid #ddd; background:#fafafa;
-      color:#111; text-decoration:none; font-weight: 600; font-size: 14px;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
     }
-    .btn:hover { background:#f0f0f0; }
+    .brand-badge{
+      width:36px;
+      height:36px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      background:#f5a14a;
+      color:#111;
+      border:2px solid rgba(0,0,0,.15);
+    }
+    .brand-title{
+      font-weight:800;
+      letter-spacing:.12em;
+      font-size:14px;
+    }
+    .brand-sub{
+      font-size:12px;
+      color:#666;
+      margin-top:2px;
+    }
+    .site-nav{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+    .nav-link{
+      color:#111;
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      letter-spacing:.08em;
+    }
+    .nav-link:hover{opacity:.7;}
 
-    .note {
-      margin-top: 14px; color:#666; font-size: 13px;
+    /* ===== MAIN CONTENT ===== */
+    main{padding:20px;}
+    .wrap{max-width:1100px;margin:0 auto;}
+
+    .hero{
+      background:#fff;
+      border-radius:16px;
+      padding:22px;
+      margin-bottom:18px;
+      border:3px solid rgba(245,161,74,.8);
+    }
+    .hero h2{margin:0 0 8px 0;font-size:28px;}
+    .hero p{margin:0;color:#555;font-size:16px;}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:16px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:16px;
+      padding:18px;
+      border:3px solid rgba(245,161,74,.8);
+    }
+    .card h3{margin:0 0 8px 0;font-size:20px;}
+    .card p{margin:0 0 14px 0;color:#555;font-size:14px;line-height:1.4;}
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      background:#fafafa;
+      border:1px solid #ddd;
+      color:#111;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+    }
+    .btn:hover{background:#f0f0f0;}
+
+    footer{
       text-align:center;
-    }
-
-    footer {
-      padding: 18px; color:#777; font-size: 12px; text-align:center;
+      font-size:12px;
+      color:#777;
+      padding:18px;
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="wrap">
-      <h1>HARDWOOD HIGHLIGHTS</h1>
-      <div class="tag">Pro &amp; College • Men &amp; Women</div>
 
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="nba.html">NBA</a>
-        <a href="wnba.html">WNBA</a>
-        <a href="ncaa.html">NCAA Men</a>
-        <a href="ncaaw.html">NCAA Women</a>
-        <a href="mm.html">March</a>
-      </nav>
+  <!-- ===== BANNER ===== -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-badge">HH</div>
+      <div>
+        <div class="brand-title">HARDWOOD HIGHLIGHTS</div>
+        <div class="brand-sub">Pro &amp; College • Men &amp; Women</div>
+      </div>
     </div>
+
+    <nav class="site-nav">
+      <a class="nav-link" href="index.html">HOME</a>
+      <a class="nav-link" href="nba.html">NBA</a>
+      <a class="nav-link" href="wnba.html">WNBA</a>
+      <a class="nav-link" href="ncaa.html">NCAA M</a>
+      <a class="nav-link" href="ncaaw.html">NCAA W</a>
+      <a class="nav-link" href="mm.html">MARCH</a>
+    </nav>
   </header>
 
+  <!-- ===== BODY ===== -->
   <main>
     <div class="wrap">
+
       <section class="hero">
         <h2>Today on the Hardwood</h2>
         <p>
-          Jump straight to live scores, results, fixtures, and standings — across pro &amp; college basketball.
+          Jump straight to scores, results, fixtures, standings, and tournament coverage
+          across pro &amp; college basketball.
         </p>
       </section>
 
       <section class="grid">
         <article class="card">
           <h3>NBA</h3>
-          <p>Scores, results, fixtures, and standings — updated automatically.</p>
+          <p>Professional basketball hub — scores, results, fixtures, and standings.</p>
           <a class="btn" href="nba.html">Open NBA</a>
         </article>
 
         <article class="card">
           <h3>WNBA</h3>
-          <p>Season-aware page: works in-season and offseason (results &amp; standings).</p>
+          <p>Season-aware WNBA page with results and standings year-round.</p>
           <a class="btn" href="wnba.html">Open WNBA</a>
         </article>
 
         <article class="card">
           <h3>NCAA Men</h3>
-          <p
-::contentReference[oaicite:0]{index=0}
+          <p>Men’s college basketball — matchups, results, and standings.</p>
+          <a class="btn" href="ncaa.html">Open NCAA Men</a>
+        </article>
+
+        <article class="card">
+          <h3>NCAA Women</h3>
+          <p>Women’s college basketball — matchups, results, and standings.</p>
+          <a class="btn" href="ncaaw.html">Open NCAA Women</a>
+        </article>
+
+        <article class="card">
+          <h3>March</h3>
+          <p>March Madness hub — brackets, tournament tracking, and championship coverage.</p>
+          <a class="btn" href="mm.html">Open March</a>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    © Hardwood Highlights
+  </footer>
+
+</body>
+</html>
