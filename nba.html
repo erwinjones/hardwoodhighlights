@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>WNBA | Hardwood Highlights</title>
+  <title>NBA | Hardwood Highlights</title>
 
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f3f3f3; }
@@ -17,21 +17,17 @@
     .frameWrap { width: 100%; max-width: 980px; margin: 12px auto 0; }
     iframe { width: 100%; height: 900px; border: 0; border-radius: 10px; background:#fff; }
     .btnrow { text-align:center; margin-top: 10px; }
-    .btn {
-      display:inline-block; padding:10px 12px; border-radius:10px;
-      border:1px solid #ddd; text-decoration:none; color:#111; margin: 6px;
-      background:#fafafa;
-    }
+    .btn { display:inline-block; padding:10px 12px; border-radius:10px; border:1px solid #ddd; text-decoration:none; color:#111; margin:6px; background:#fafafa; }
     .btn:hover { background:#f0f0f0; }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Hardwood Highlights — WNBA</h1>
+    <h1>Hardwood Highlights — NBA</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="nba.html">NBA</a>
+      <a href="wnba.html">WNBA</a>
       <a href="ncaa.html">NCAA Men</a>
       <a href="ncaaw.html">NCAA Women</a>
     </nav>
@@ -39,30 +35,23 @@
 
   <main>
     <div class="card">
-      <h2 style="margin-top:0;text-align:center;">WNBA Scores, Results & Standings</h2>
+      <h2 style="margin-top:0;text-align:center;">NBA Scores, Results & Standings</h2>
       <p class="muted" style="text-align:center;margin-top:0;">
-        WNBA status at a glance — scores, results, fixtures, and standings (works in-season and offseason).
+        NBA status at a glance — scores, results, fixtures, and standings.
       </p>
 
       <div class="frameWrap">
-        <!-- Direct-to-WNBA page (no soccer-first browsing) -->
         <iframe
-          src="https://www.flashscoreusa.com/basketball/usa/wnba/"
+          src="https://www.flashscoreusa.com/basketball/usa/nba/"
           loading="lazy"
           referrerpolicy="no-referrer"
-          title="WNBA Scores, Results, Fixtures, Standings">
-        </iframe>
+          title="NBA Scores, Results, Fixtures, Standings"></iframe>
       </div>
 
       <div class="btnrow">
-        <!-- Optional: official references open in a new tab -->
-        <a class="btn" href="https://www.wnba.com/standings" target="_blank" rel="noopener noreferrer">Official WNBA Standings</a>
-        <a class="btn" href="https://www.wnba.com/schedule" target="_blank" rel="noopener noreferrer">Official WNBA Schedule</a>
+        <a class="btn" href="https://www.nba.com/standings" target="_blank" rel="noopener noreferrer">Official NBA Standings</a>
+        <a class="btn" href="https://www.nba.com/schedule" target="_blank" rel="noopener noreferrer">Official NBA Schedule</a>
       </div>
-
-      <p class="muted" style="text-align:center;margin:12px 0 0;">
-        Tip: Inside the board, use “Results / Fixtures / Standings” to jump exactly where you want.
-      </p>
     </div>
   </main>
 </body>
