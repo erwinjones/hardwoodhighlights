@@ -1,122 +1,55 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8127325405743781"
-          crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NCAA Women | Hardwood Highlights</title>
 
-  <meta charset="utf-8">
-  <title>NCAA Women Highlights – Hardwood Highlights</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/favicon.ico">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { padding: 16px; background: #111; color: #fff; }
+    header h1 { margin: 0; font-size: 20px; }
+    nav { margin-top: 8px; }
+    nav a { color: #fff; text-decoration: none; margin-right: 12px; }
+    main { padding: 16px; }
+    .card { max-width: 980px; margin: 0 auto; background: #fff; border-radius: 10px; padding: 14px; }
+    .muted { color: #666; font-size: 14px; }
+    .frameWrap { width: 100%; max-width: 980px; margin: 12px auto 0; }
+    iframe { width: 100%; height: 900px; border: 0; }
+    .small { font-size: 13px; }
+  </style>
 </head>
+
 <body>
-
-<header>
-  <div class="nav-container">
-    <div class="brand-lockup">
-      <div class="brand-mark">HH</div>
-      <div>
-        <div class="brand-title">Hardwood Highlights</div>
-        <div class="brand-subtitle">Pro & College · Men & Women</div>
-      </div>
-    </div>
-    <nav aria-label="Primary">
-      <ul>
-        <li><a class="" href="index.html">Home</a></li><li><a class="" href="nba.html">NBA</a></li><li><a class="" href="wnba.html">WNBA</a></li><li><a class="" href="ncaa.html">NCAA M</a></li><li><a class="active" href="ncaaw.html">NCAA W</a></li><li><a class="" href="mm.html">March</a></li>
-      </ul>
+  <header>
+    <h1>Hardwood Highlights — NCAA Women</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="nba.html">NBA</a>
+      <a href="wnba.html">WNBA</a>
+      <a href="ncaa.html">NCAA Men</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-<div class="page-shell">
+  <main>
+    <div class="card">
+      <h2 style="margin-top:0;text-align:center;">Live NCAA Women’s Scoreboard</h2>
+      <p class="muted" style="text-align:center;margin-top:0;">
+        Live NCAA women’s scores — updated in real time.
+      </p>
 
-  <section class="hero">
-    <h1>NCAA Women Highlights</h1>
-    <p class="hero-subtitle">Standings snapshots, recent results, featured matchups, and player spotlights.</p>
-  </section>
-
-  <section class="sections-grid">
-    <article class="card">
-      <h2><span class="section-icon">🎯</span>Featured Matchup</h2>
-      <div id="ncaaw-featured" class="list-compact"></div>
-    </article>
-
-    <aside class="card">
-      <div class="card-header-row">
-        <h2><span class="section-icon">📅</span>Upcoming Games</h2>
-        <button class="btn" id="ncaaw-refresh" type="button">Refresh</button>
-      </div>
-      <div id="ncaaw-status" class="muted" style="margin-top:6px"></div>
-      <div id="ncaaw-upcoming" class="schedule"></div>
-      <div class="card" style="margin-top:14px;">
-        <div class="card-header">
-          <div>
-            <strong>NCAA Women Leaders</strong>
-            <div class="muted">Top performers (last 3 days)</div>
-          </div>
-        </div>
-        <div id="ncaaw-leaders" class="leaders-body">
-          <div class="muted">Loading…</div>
-        </div>
+      <div class="frameWrap">
+        <iframe
+          src="https://www.scoreboard.com/us/basketball/usa/ncaa-women/"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          title="NCAA Women Live Scoreboard"></iframe>
       </div>
 
-    </aside>
-  </section>
-
-  <section class="sections-grid">
-    <article class="card">
-      <h2><span class="section-icon">📊</span>Standings Snapshot</h2>
-      <p class="muted">Stable snapshot — update anytime.</p>
-      <table>
-        <thead><tr><th>Team</th><th>W</th><th>L</th></tr></thead>
-        <tbody id="ncaaw-standings-body">
-          <tr><td colspan="3" class="muted">Loading standings…</td></tr>
-        </tbody>
-      </table>
-    </article>
-
-    <aside class="card">
-      <h2><span class="section-icon">🧾</span>Recent Results</h2>
-      <div id="ncaaw-recent" class="schedule"></div><div class="row-sub">Team A — · Team B —</div></div>
-        <div class="row"><div class="row-title">Game 2</div><div class="row-sub">Team A — · Team B —</div></div>
-        <div class="row"><div class="row-title">Game 3</div><div class="row-sub">Team A — · Team B —</div></div>
-      </div>
-    </aside>
-  </section>
-
-  <section class="sections-grid">
-    <article class="card">
-      <h2><span class="section-icon">📡</span>Live Scoreboard</h2>
-      <p class="muted">Live results feed (best-effort).</p>
-      <div class="scoreboard-block">
-        <div class="scoreboard-head">
-          <div>
-            <strong>NCAA Women Live</strong>
-            <div class="muted" id="ncaaw-status">—</div>
-          </div>
-          <button class="btn" id="ncaaw-refresh" type="button">Refresh</button>
-        </div>
-        <div id="ncaaw-scoreboard" class="scoreboard-body"></div>
-      </div>
-    </article>
-  </section>
-
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div>© 2025 Hardwood Highlights.</div>
-    <div class="footer-links">
-      <a href="legal/disclaimer.html">Disclaimer</a>
-      <a href="legal/privacy.html">Privacy</a>
-      <a href="legal/terms.html">Terms</a>
-      <a href="legal/contact.html">Contact</a>
+      <p class="muted small" style="text-align:center;margin-top:10px;">
+        Tip: use the filters inside the scoreboard to jump to today’s games, teams, and matchups.
+      </p>
     </div>
-  </div>
-</footer>
-
-<script src="assets/live-scoreboards.js" defer></script>
+  </main>
 </body>
 </html>
