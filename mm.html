@@ -3,121 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hardwood Highlights | Pro & College • Men & Women</title>
+  <title>March Madness | Hardwood Highlights</title>
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon.ico">
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background:#f4f4f4;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f4f4f4; }
 
     /* ===== HEADER / BANNER ===== */
     .site-header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:14px 18px;
-      background:#fff;
-      border-bottom:1px solid rgba(0,0,0,.1);
-      position:sticky;
-      top:0;
-      z-index:10;
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 18px; background:#fff; border-bottom:1px solid rgba(0,0,0,.1);
+      position:sticky; top:0; z-index:10;
     }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
+    .brand{display:flex; align-items:center; gap:12px;}
     .brand-badge{
-      width:36px;
-      height:36px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:800;
-      background:#f5a14a;
-      color:#111;
+      width:36px; height:36px; border-radius:50%;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:800; background:#f5a14a; color:#111;
       border:2px solid rgba(0,0,0,.15);
     }
-    .brand-title{
-      font-weight:800;
-      letter-spacing:.12em;
-      font-size:14px;
-    }
-    .brand-sub{
-      font-size:12px;
-      color:#666;
-      margin-top:2px;
-    }
-    .site-nav{
-      display:flex;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-    .nav-link{
-      color:#111;
-      text-decoration:none;
-      font-weight:700;
-      font-size:13px;
-      letter-spacing:.08em;
-    }
+    .brand-title{font-weight:800; letter-spacing:.12em; font-size:14px;}
+    .brand-sub{font-size:12px; color:#666; margin-top:2px;}
+    .site-nav{display:flex; gap:16px; flex-wrap:wrap;}
+    .nav-link{color:#111; text-decoration:none; font-weight:700; font-size:13px; letter-spacing:.08em;}
     .nav-link:hover{opacity:.7;}
 
-    /* ===== MAIN CONTENT ===== */
+    /* ===== MAIN ===== */
     main{padding:20px;}
     .wrap{max-width:1100px;margin:0 auto;}
 
     .hero{
-      background:#fff;
-      border-radius:16px;
-      padding:22px;
-      margin-bottom:18px;
+      background:#fff; border-radius:16px; padding:22px; margin-bottom:18px;
       border:3px solid rgba(245,161,74,.8);
     }
     .hero h2{margin:0 0 8px 0;font-size:28px;}
-    .hero p{margin:0;color:#555;font-size:16px;}
+    .hero p{margin:0;color:#555;font-size:16px; line-height:1.45;}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:16px;
-    }
-
+    .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;}
     .card{
-      background:#fff;
-      border-radius:16px;
-      padding:18px;
+      background:#fff; border-radius:16px; padding:18px;
       border:3px solid rgba(245,161,74,.8);
     }
     .card h3{margin:0 0 8px 0;font-size:20px;}
     .card p{margin:0 0 14px 0;color:#555;font-size:14px;line-height:1.4;}
 
     .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:10px;
-      background:#fafafa;
-      border:1px solid #ddd;
-      color:#111;
-      text-decoration:none;
-      font-weight:700;
-      font-size:14px;
+      display:inline-block; padding:10px 14px; border-radius:10px;
+      background:#fafafa; border:1px solid #ddd; color:#111;
+      text-decoration:none; font-weight:700; font-size:14px;
+      margin-right:8px; margin-top:6px;
     }
     .btn:hover{background:#f0f0f0;}
 
-    footer{
-      text-align:center;
-      font-size:12px;
-      color:#777;
-      padding:18px;
+    .sectionTitle{margin:18px 0 10px 0; font-size:18px;}
+    .muted{color:#666; font-size:13px;}
+    .callout{
+      margin-top:14px; padding:12px 14px; border-radius:12px;
+      background:#fff7ee; border:1px solid rgba(245,161,74,.55);
+      color:#555; font-size:14px; line-height:1.45;
     }
+
+    footer{ text-align:center; font-size:12px; color:#777; padding:18px; }
   </style>
 </head>
 
@@ -143,49 +92,49 @@
     </nav>
   </header>
 
-  <!-- ===== BODY ===== -->
   <main>
     <div class="wrap">
 
       <section class="hero">
-        <h2>Today on the Hardwood</h2>
+        <h2>March Madness Central</h2>
         <p>
-          Jump straight to scores, results, fixtures, standings, and tournament coverage
-          across pro &amp; college basketball.
+          Brackets, tournament tracking, and championship coverage — for NCAA Men and NCAA Women.
+          This page stays useful year-round and becomes “bracket central” in March.
         </p>
+
+        <div class="callout">
+          <strong>Right now:</strong> NCAA seasons are in progress. When March arrives, this page will highlight brackets and tournament rounds.
+        </div>
       </section>
 
       <section class="grid">
         <article class="card">
-          <h3>NBA</h3>
-          <p>Professional basketball hub — scores, results, fixtures, and standings.</p>
-          <a class="btn" href="nba.html">Open NBA</a>
-        </article>
-
-        <article class="card">
-          <h3>WNBA</h3>
-          <p>Season-aware WNBA page with results and standings year-round.</p>
-          <a class="btn" href="wnba.html">Open WNBA</a>
-        </article>
-
-        <article class="card">
-          <h3>NCAA Men</h3>
-          <p>Men’s college basketball — matchups, results, and standings.</p>
+          <h3>Men’s Tournament</h3>
+          <p>Use the NCAA Men page for matchups and results. In March, this section will focus on bracket rounds.</p>
           <a class="btn" href="ncaa.html">Open NCAA Men</a>
+          <a class="btn" href="https://www.ncaa.com/march-madness-live/bracket" target="_blank" rel="noopener noreferrer">Official Men’s Bracket</a>
         </article>
 
         <article class="card">
-          <h3>NCAA Women</h3>
-          <p>Women’s college basketball — matchups, results, and standings.</p>
+          <h3>Women’s Tournament</h3>
+          <p>Use the NCAA Women page for matchups and results. In March, this section will focus on bracket rounds.</p>
           <a class="btn" href="ncaaw.html">Open NCAA Women</a>
+          <a class="btn" href="https://www.ncaa.com/brackets/basketball-women/d1" target="_blank" rel="noopener noreferrer">Official Women’s Bracket</a>
         </article>
 
         <article class="card">
-          <h3>March</h3>
-          <p>March Madness hub — brackets, tournament tracking, and championship coverage.</p>
-          <a class="btn" href="mm.html">Open March</a>
+          <h3>Quick Tournament Tools</h3>
+          <p>Fast links you can rely on. (We link out instead of copying data to keep things clean and safe.)</p>
+          <a class="btn" href="https://www.ncaa.com/scoreboard/basketball-men/d1" target="_blank" rel="noopener noreferrer">Men’s Scoreboard</a>
+          <a class="btn" href="https://www.ncaa.com/scoreboard/basketball-women/d1" target="_blank" rel="noopener noreferrer">Women’s Scoreboard</a>
         </article>
       </section>
+
+      <h3 class="sectionTitle">What you’ll add in March (no stress)</h3>
+      <p class="muted">
+        When you’re ready, we can add bracket embeds and “Today’s tournament games” sections.
+        For now, this page is clean, branded, and useful without pretending to be live.
+      </p>
 
     </div>
   </main>
