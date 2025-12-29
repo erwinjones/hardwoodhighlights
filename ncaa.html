@@ -6,16 +6,19 @@
   <title>NCAA Men | Hardwood Highlights</title>
 
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f3f3f3; }
     header { padding: 16px; background: #111; color: #fff; }
     header h1 { margin: 0; font-size: 20px; }
     nav { margin-top: 8px; }
     nav a { color: #fff; text-decoration: none; margin-right: 12px; }
     main { padding: 16px; }
-    .card { max-width: 980px; margin: 0 auto; background: #fff; border-radius: 10px; padding: 14px; }
+    .card { max-width: 980px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 14px; }
     .muted { color: #666; font-size: 14px; }
     .frameWrap { width: 100%; max-width: 980px; margin: 12px auto 0; }
-    iframe { width: 100%; height: 900px; border: 0; }
+    iframe { width: 100%; height: 900px; border: 0; border-radius: 10px; background:#fff; }
+    .btnrow { text-align:center; margin-top: 10px; }
+    .btn { display:inline-block; padding:10px 12px; border-radius:10px; border:1px solid #ddd; text-decoration:none; color:#111; margin:6px; background:#fafafa; }
+    .btn:hover { background:#f0f0f0; }
   </style>
 </head>
 
@@ -32,17 +35,17 @@
 
   <main>
     <div class="card">
-      <h2 style="margin-top:0;text-align:center;">Live NCAA Men’s Scoreboard</h2>
+      <h2 style="margin-top:0;text-align:center;">NCAA Men’s Scores, Results & Standings</h2>
       <p class="muted" style="text-align:center;margin-top:0;">
-        Live NCAA men’s scores — updated in real time.
+        NCAA men’s status at a glance — scores, results, fixtures, and standings.
       </p>
 
       <div class="frameWrap">
         <iframe
-          src="https://www.scoreboard.com/us/basketball/usa/ncaa/"
+          src="https://www.flashscore.com/basketball/usa/ncaa/"
           loading="lazy"
           referrerpolicy="no-referrer"
-          title="NCAA Men Live Scoreboard"></iframe>
+          title="NCAA Men Scores, Results, Fixtures, Standings"></iframe>
       </div>
     </div>
   </main>
