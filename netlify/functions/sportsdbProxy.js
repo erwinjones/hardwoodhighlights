@@ -1,14 +1,15 @@
 /**
  * Netlify Function: sportsdbProxy
- * Proxies TheSportsDB requests server-side (helps with CORS and rate limiting).
+ * Proxies TheSportsDB requests server-side (CORS + caching).
  * Usage: /.netlify/functions/sportsdbProxy?endpoint=eventsnextleague&id=4516
- *
- * NOTE: This uses the free public key "1" (TheSportsDB demo key).
  */
+const API_KEY = process.env.SPORTSDB_KEY || "682823";
+
 const ALLOWED_ENDPOINTS = new Set([
   "eventsnextleague",
-  "eventsround",
   "eventspastleague",
+  "lookupleaguetable",
+  "eventsround",
   "lookupleague",
 ]);
 
@@ -21,16 +22,16 @@ exports.handler = async (event) => {
     if (!ALLOWED_ENDPOINTS.has(endpoint) || !id) {
       return {
         statusCode: 400,
-        headers: { "content-type": "application/json" },
+        headers: { "content-type": "application/json; charset=utf-8" },
         body: JSON.stringify({ error: "Bad request", endpoint, id }),
       };
     }
 
-    const upstream = `https://www.thesportsdb.com/api/v1/json/1/${endpoint}.php?id=${encodeURIComponent(id)}`;
+    const upstream = `https://www.thesportsdb.com/api/v1/json/${API_KEY}/${endpoint}.php?id=${encodeURIComponent(id)}`;
 
     const r = await fetch(upstream, {
       headers: {
-        "accept": "application/json",
+        accept: "application/json",
         "user-agent": "NetlifyFunction/sportsdbProxy",
       },
     });
@@ -47,7 +48,7 @@ exports.handler = async (event) => {
   } catch (e) {
     return {
       statusCode: 500,
-      headers: { "content-type": "application/json" },
+      headers: { "content-type": "application/json; charset=utf-8" },
       body: JSON.stringify({ error: String(e) }),
     };
   }
