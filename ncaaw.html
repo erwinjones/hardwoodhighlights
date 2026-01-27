@@ -8,19 +8,28 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>NCAA Women | Hardwood Highlights</title>
 
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="styles.css" />
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f3f3f3; }
-    header { padding: 16px; background: #111; color: #fff; }
-    header h1 { margin: 0; font-size: 20px; }
-    nav { margin-top: 8px; }
-    nav a { color: #fff; text-decoration: none; margin-right: 12px; }
-    main { padding: 16px; }
-    .card { max-width: 980px; margin: 0 auto; background: #fff; border-radius: 12px; padding: 14px; }
-    .muted { color: #666; font-size: 14px; }
-    .frameWrap { width: 100%; max-width: 980px; margin: 12px auto 0; }
-    iframe { width: 100%; height: 900px; border: 0; border-radius: 10px; background:#fff; }
-    .btnrow { text-align:center; margin-top: 10px; }
-    .btn { display:inline-block; padding:10px 12px; border-radius:10px; border:1px solid #ddd; text-decoration:none; color:#111; margin:6px; background:#fafafa; }
+    body { font-family: Arial, sans-serif; margin:0; background:#f3f3f3; }
+    header { padding:16px; background:#111; color:#fff; }
+    header h1 { margin:0; font-size:20px; }
+    nav { margin-top:8px; }
+    nav a { color:#fff; text-decoration:none; margin-right:12px; }
+    main { padding:16px; }
+    .card { max-width:980px; margin:0 auto; background:#fff; border-radius:12px; padding:14px; }
+    .muted { color:#666; font-size:14px; }
+    h2 { margin: 10px 0; }
+    .section { margin-top:16px; padding-top:12px; border-top:1px solid #eee; }
+    .schedule-row { padding:10px 0; border-bottom:1px solid #eee; }
+    .schedule-matchup { font-weight:700; }
+    .schedule-score { font-size:16px; margin-top:4px; }
+    .schedule-meta { font-size:13px; color:#666; margin-top:4px; }
+    table { width:100%; border-collapse: collapse; }
+    th, td { text-align:left; padding:8px; border-bottom:1px solid #eee; }
+    .btnrow { text-align:center; margin-top:10px; }
+    .btn { display:inline-block; padding:10px 12px; border-radius:10px; border:1px solid #ddd; text-decoration:none; color:#111; margin:6px; background:#fafafa; cursor:pointer; }
     .btn:hover { background:#f0f0f0; }
   </style>
 </head>
@@ -40,15 +49,60 @@
     <div class="card">
       <h2 style="margin-top:0;text-align:center;">NCAA Women’s Scores, Results & Standings</h2>
       <p class="muted" style="text-align:center;margin-top:0;">
-        NCAA women’s status at a glance — scores, results, fixtures, and standings.
+        SportsDB primary with ESPN fallback. If fallback is used, it will be shown below.
       </p>
 
-      <div class="frameWrap">
-        <iframe
-          src="https://www.flashscoreusa.com/basketball/usa/ncaa-women/"
-          loading="lazy"
-          referrerpolicy="no-referrer"
-          title="NCAA Women Scores, Results, Fixtures, Standings"></iframe>
+      <!-- ✅ STATUS LINE -->
+      <div id="ncaaw-status" class="muted" style="text-align:center;"></div>
+
+      <div class="section">
+        <h2>🏀 Live Scoreboard</h2>
+        <div id="ncaaw-scoreboard">
+          <div class="muted">Loading…</div>
+        </div>
+        <div style="text-align:center;margin-top:10px;">
+          <button id="ncaaw-refresh" class="btn" type="button">Refresh</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🎯 Featured Matchup</h2>
+        <div id="ncaaw-featured">
+          <div class="muted">Loading…</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>📅 Upcoming Games</h2>
+        <div id="ncaaw-upcoming">
+          <div class="muted">Loading…</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>🧾 Recent Results</h2>
+        <div id="ncaaw-recent">
+          <div class="muted">Loading…</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>📊 Standings Snapshot</h2>
+        <table>
+          <thead>
+            <tr><th>Team</th><th>W</th><th>L</th></tr>
+          </thead>
+          <tbody id="ncaaw-standings-body">
+            <tr><td colspan="3" class="muted">Loading standings…</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section">
+        <h2>⭐ Leaders</h2>
+        <div id="ncaaw-leaders">
+          <div class="muted">Leaders will appear when available.</div>
+        </div>
       </div>
 
       <div class="btnrow">
@@ -56,5 +110,7 @@
       </div>
     </div>
   </main>
+
+  <script src="assets/live-scoreboards.js"></script>
 </body>
 </html>
