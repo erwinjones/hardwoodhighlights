@@ -8,9 +8,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>March Madness | Hardwood Highlights</title>
 
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="favicon.ico">
+  <!-- Favicon (use root path like the other pages) -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/favicon.ico">
 
   <style>
     body { font-family: Arial, sans-serif; margin: 0; padding: 0; background:#f4f4f4; }
@@ -69,6 +69,22 @@
       color:#555; font-size:14px; line-height:1.45;
     }
 
+    /* ===== March Mode Live Panel ===== */
+    .livePanel{
+      display:none;
+      margin: 0 0 18px 0;
+      padding:18px;
+      background:#fff;
+      border-radius:16px;
+      border:3px solid rgba(245,161,74,.8);
+    }
+    .livePanel h3{margin:0 0 8px 0;font-size:20px;}
+    .livePanel .muted{margin-top:0;}
+    .schedule-row { padding:10px 0; border-bottom:1px solid #eee; }
+    .schedule-matchup { font-weight:700; }
+    .schedule-score { font-size:16px; margin-top:4px; }
+    .schedule-meta { font-size:13px; color:#666; margin-top:4px; }
+
     footer{ text-align:center; font-size:12px; color:#777; padding:18px; }
   </style>
 </head>
@@ -97,6 +113,22 @@
 
   <main>
     <div class="wrap">
+
+      <!-- ✅ Auto-shows in March (hands-off) -->
+      <section id="mm-live" class="livePanel">
+        <h3>March Mode: Tournament Tracker</h3>
+        <p class="muted">
+          Auto-updates during March. Source will show SportsDB first and ESPN fallback if needed.
+        </p>
+
+        <div id="mm-status" class="muted"></div>
+
+        <h4 class="sectionTitle" style="margin-top:14px;">Recent Results</h4>
+        <div id="mm-recent"><div class="muted">Loading…</div></div>
+
+        <h4 class="sectionTitle">Upcoming Games</h4>
+        <div id="mm-upcoming"><div class="muted">Loading…</div></div>
+      </section>
 
       <section class="hero">
         <h2>March Madness Central</h2>
@@ -145,6 +177,21 @@
   <footer>
     © Hardwood Highlights
   </footer>
+
+  <!-- Load the existing site script (it will only run for elements that exist) -->
+  <script src="assets/live-scoreboards.js"></script>
+  <script>
+    // Hands-off: show the live tracker only in March.
+    // (If you later want late-Feb through early-April, we can expand the window.)
+    (function(){
+      var m = new Date().getMonth(); // 0=Jan ... 2=Mar
+      var live = document.getElementById("mm-live");
+      if(!live) return;
+      if(m === 2){
+        live.style.display = "block";
+      }
+    })();
+  </script>
 
 </body>
 </html>
