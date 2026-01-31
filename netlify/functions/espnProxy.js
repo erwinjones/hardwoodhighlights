@@ -7,9 +7,7 @@
  *   /.netlify/functions/espnProxy?path=basketball/nba/scoreboard&dates=20251224-20251230
  *   /.netlify/functions/espnProxy?path=basketball/nba/standings
  */
-const ALLOWED_PATHS = new Set([
-  // Pro Football Highlights
-  "football/nfl/scoreboard",
+
 
   // Hardwood Highlights scoreboards
   "basketball/nba/scoreboard",
